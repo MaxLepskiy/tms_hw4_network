@@ -2,11 +2,11 @@
 1. Установил утилиту ifconfig, вывел список сетевых интерфейсов ВМ.  
    **sudo apt install net-tools**  
    **sudo ifconfig -a**  
-   **ip link show**  
-   **ip -4 -o a**  
-   **ip addr show**  
-   **ip route show** 
-   **sudo netplan try**
+   Дополнительные команды для проверки сетевых интерфейсов(  
+   _ip link show_  
+   _ip -4 -o a_  
+   _ip addr show_  
+   _ip route show_)
    <img width="1210" height="858" alt="image" src="https://raw.githubusercontent.com/MaxLepskiy/tms_hw4_network/refs/heads/main/1ifconfig.png"/>
 2. Указал статический адрес для enp0s9 в файле настроек netplan. Применил изменения.  
    **sudo nano /etc/netplan/50-cloud-init.yaml**  
@@ -22,14 +22,14 @@
 # SSH
 1. Установил ssh  
    **sudo apt-get install ssh**
-   <img width="1210" height="858" alt="image" src="https://raw.githubusercontent.com/MaxLepskiy/tms_hw4_network/refs/heads/main/5ssh.png"/>
 3. Установил OpenSSH  
    **sudo apt install openssh-server**  
 4. Добавил пакет SSH-вервера в автозагрузку  
    **sudo systemctl enable ssh**  
 5. Проверил работу SSH  
-   **systemctl status ssh**  
-6. Изменил порт ssh на 1911  
+   **systemctl status ssh**
+   <img width="1210" height="858" alt="image" src="https://raw.githubusercontent.com/MaxLepskiy/tms_hw4_network/refs/heads/main/5ssh.png"/>
+7. Изменил порт ssh на 1911  
    **sudo nano /etc/ssh/ssh**  
    **systemctl restart ssh**
    <img width="1210" height="858" alt="image" src="https://raw.githubusercontent.com/MaxLepskiy/tms_hw4_network/refs/heads/main/6port.png"/>
